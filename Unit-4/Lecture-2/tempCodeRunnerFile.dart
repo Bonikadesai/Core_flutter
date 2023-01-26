@@ -1,5 +1,4 @@
 import 'dart:io';
-
 void main() {
   List<Map> data = List.generate(
     3,
@@ -7,8 +6,9 @@ void main() {
   );
 
   data.forEach((element) {
-    int? id, age, salary;
+    int? id;
     String? name;
+    double? per;
 
     stdout.write("Enter Id :- ");
     id = int.parse(stdin.readLineSync()!);
@@ -16,17 +16,13 @@ void main() {
     stdout.write("Enter Name :- ");
     name = stdin.readLineSync()!;
 
-    stdout.write("Enter Age :- ");
-    age = int.parse(stdin.readLineSync()!);
-
-    stdout.write("Enter Salary :- ");
-    salary = int.parse(stdin.readLineSync()!);
+    stdout.write("Enter Per :- ");
+    per = double.parse(stdin.readLineSync()!);
 
     Map m = {
       'id': id,
       'name': name,
-      'age': age,
-      'salary': salary,
+      'per': per,
     };
     data[data.indexOf(element)].addEntries(m.entries);
   });

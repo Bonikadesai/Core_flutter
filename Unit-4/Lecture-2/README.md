@@ -12,13 +12,13 @@ Take below mentioned attributes for one employee:
 ><u>**Program**</u> : 
 
     import 'dart:io';
+
     void main() {
     List<Map> data = List.generate(3,(index) => {},);
 
     data.forEach((element) {
-        int? id;
+        int? id, age, salary;
         String? name;
-        double? per;
 
         stdout.write("Enter Id :- ");
         id = int.parse(stdin.readLineSync()!);
@@ -26,21 +26,45 @@ Take below mentioned attributes for one employee:
         stdout.write("Enter Name :- ");
         name = stdin.readLineSync()!;
 
-        stdout.write("Enter Per :- ");
-        per = double.parse(stdin.readLineSync()!);
+        stdout.write("Enter Age :- ");
+        age = int.parse(stdin.readLineSync()!);
+
+        stdout.write("Enter Salary :- ");
+        salary = int.parse(stdin.readLineSync()!);
 
         Map m = {
         'id': id,
         'name': name,
-        'per': per,
+        'age': age,
+        'salary': salary,
         };
         data[data.indexOf(element)].addEntries(m.entries);
     });
     print(data);
     }
 
+
 ><u>**Output**</u> : 
 
-![Error Text](https://github.com/Bonikadesai/Cpp/blob/master/PR-1/Image/PR-1_1/Screenshot_20221225_051610.png)
+<br>
+
+><u>**Aim**</u> : 2) Write a Dart Program to print all unique elements
+from a List.
+Elements may be redundant while entering into
+a List. User can only enter elements of String
+datatype.
+
+><u>**Program**</u> : 
+
+    void main() {
+    List l = [1, 1, 5, 3, 2.16, 5, "Hello", true];
+
+    Set s = l.toSet();
+    List b = s.toList();
+
+    print(b);
+    }
+
+><u>**Output**</u> : 
 
 <br>
