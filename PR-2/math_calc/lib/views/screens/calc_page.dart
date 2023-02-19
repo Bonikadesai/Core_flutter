@@ -544,9 +544,9 @@ class _CalcState extends State<Calc> {
                           symbol == '*' ||
                           symbol == '/' ||
                           symbol == '%') {
-                        a = ((a * 10) + 0);
+                        a = ((a * 10) + 00);
                       } else {
-                        b = ((b * 10) + 0);
+                        b = ((b * 10) + 00);
                       }
                     });
                   },
@@ -556,7 +556,7 @@ class _CalcState extends State<Calc> {
                     width: 75,
                     color: Colors.white,
                     child: Text(
-                      "$zero",
+                      "$doubleZero",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25,
@@ -576,9 +576,9 @@ class _CalcState extends State<Calc> {
                           symbol == '*' ||
                           symbol == '/' ||
                           symbol == '%') {
-                        a = ((a * 10) + 00);
+                        a = ((a * 10) + 0);
                       } else {
-                        b = ((b * 10) + 00);
+                        b = ((b * 10) + 0);
                       }
                     });
                   },
@@ -588,7 +588,7 @@ class _CalcState extends State<Calc> {
                     width: 75,
                     color: Colors.white,
                     child: Text(
-                      "$doubleZero",
+                      "$zero",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25,
