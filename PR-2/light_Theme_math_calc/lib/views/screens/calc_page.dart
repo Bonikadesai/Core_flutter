@@ -538,7 +538,7 @@ class _CalcState extends State<Calc> {
                 InkWell(
                   onTap: () {
                     setState(() {
-                      question = question + (zero).toString();
+                      question = question + (doubleZero).toString();
                       if (symbol == '+' ||
                           symbol == '-' ||
                           symbol == '*' ||
@@ -570,7 +570,7 @@ class _CalcState extends State<Calc> {
                 InkWell(
                   onTap: () {
                     setState(() {
-                      question = question + (doubleZero).toString();
+                      question = question + (zero).toString();
                       if (symbol == '+' ||
                           symbol == '-' ||
                           symbol == '*' ||
@@ -628,15 +628,16 @@ class _CalcState extends State<Calc> {
                   onPressed: () {
                     setState(() {
                       if (symbol == '+') {
-                        answer = (a + b).toString();
+                        answer = (b + a).toString();
                       } else if (symbol == '-') {
-                        answer = (a - b).toString();
+                        answer = (b - a).toString();
                       } else if (symbol == '*') {
-                        answer = (a * b).toString();
-                      } else if (symbol == '/') {
-                        answer = (a / b).toString();
+                        answer = (b * a).toString();
+                      }
+                      if (symbol == '/') {
+                        answer = (b / a).toInt().toString();
                       } else if (symbol == '%') {
-                        answer = (a % b).toString();
+                        answer = (b % a).toString();
                       } else
                         () {
                           answer == '0';
